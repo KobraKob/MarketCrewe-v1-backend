@@ -12,7 +12,7 @@ app = FastAPI(title="MarketCrew Delivery API")
 # Allow frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Temporarily allow all origins for debugging
+    allow_origins=["market-new-deploy-git-main-catchrepards-projects.vercel.app"],  # Temporarily allow all origins for debugging
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
