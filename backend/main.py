@@ -9,6 +9,14 @@ from routes.auth import auth_router, get_current_user # Import the new auth rout
 
 app = FastAPI(title="MarketCrew Delivery API")
 
+@app.middleware("http")
+async def normalize_path(request: Request, call_next):
+    # Remove duplicate slashes from the path
+    if '//' in request.scope['path']:
+        request.scope['path'] = request.scope['path'].replace('//', '/')
+    response = await call_next(request)
+    return response
+
 # Allow frontend
 app.add_middleware(
     CORSMiddleware,
