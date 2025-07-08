@@ -16,7 +16,9 @@ app.add_middleware(
         "https://market-new-deploy-git-main-catchrepards-projects.vercel.app",
         "http://localhost:3000",
         "http://localhost:5173",
-        "https://marketcrewe-v1-backend-production.up.railway.app"
+        "https://marketcrewe-v1-backend-production.up.railway.app",
+        "market-new-deploy.vercel.app",
+        "market-new-deploy-pqaepbije-catchrepards-projects.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
